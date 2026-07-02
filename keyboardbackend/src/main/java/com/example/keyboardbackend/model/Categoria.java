@@ -30,7 +30,8 @@ public class Categoria {
     @Column(name = "imagenCategoria", columnDefinition = "TEXT")
     private String imagenCategoria;
 
-    //TODO implementacion de relacion recursiva (padreID) para futuro
+    /*TODO implementacion de relacion recursiva (padreID) para futuro
+    */
     @Column(nullable = false)
     private Boolean activa = true;
 
