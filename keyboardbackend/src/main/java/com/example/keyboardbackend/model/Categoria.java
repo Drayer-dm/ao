@@ -1,11 +1,19 @@
 package com.example.keyboardbackend.model;
 
 import jakarta.persistence.*;
-
+import lombok.Getter;
+import lombok.Setter;
+import lombok.NoArgsConstructor;
+import lombok.AllArgsConstructor;
 
 @Entity
 @Table(name = "categoria")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Categoria {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long categoriaID;
@@ -24,69 +32,8 @@ public class Categoria {
 
     //TODO implementacion de relacion recursiva (padreID) para futuro
     @Column(nullable = false)
-    private Boolean activa;
+    private Boolean activa = true;
 
     @Column(nullable = false)
     private Integer orden = 0;
-
-    //Constructor
-    public Categoria() {
-    }
-
-    //Getters and Setters
-    public Long getCategoriaID() {
-        return categoriaID;
-    }
-
-    public void setCategoriaID(Long categoriaID) {
-        this.categoriaID = categoriaID;
-    }
-
-    public String getNombreCategoria() {
-        return nombreCategoria;
-    }
-
-    public void setNombreCategoria(String nombreCategoria) {
-        this.nombreCategoria = nombreCategoria;
-    }
-
-    public String getSlugCategoria() {
-        return slugCategoria;
-    }
-
-    public void setSlugCategoria(String slugCategoria) {
-        this.slugCategoria = slugCategoria;
-    }
-
-    public String getDescripcionCategoria() {
-        return descripcionCategoria;
-    }
-
-    public void setDescripcionCategoria(String descripcionCategoria) {
-        this.descripcionCategoria = descripcionCategoria;
-    }
-
-    public String getImagenCategoria() {
-        return imagenCategoria;
-    }
-
-    public void setImagenCategoria(String imagenCategoria) {
-        this.imagenCategoria = imagenCategoria;
-    }
-
-    public Boolean getActiva() {
-        return activa;
-    }
-    
-    public void setActiva(Boolean activa) {
-        this.activa = activa;
-    }
-
-    public Integer getOrden() {
-        return orden;
-    }
-
-    public void setOrden(Integer orden) {
-        this.orden = orden;
-    }
 }
