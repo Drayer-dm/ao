@@ -1,6 +1,6 @@
 package com.example.keyboardbackend.model;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Embeddable;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.NoArgsConstructor;
