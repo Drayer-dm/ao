@@ -40,4 +40,60 @@ public class Marca {
 
     @Column(nullable = false)
     private Integer orden = 0;
+
+    public Long getMarcaID() {
+        return marcaID;
+    }
+
+    public void setMarcaID(Long marcaID) {
+        this.marcaID = marcaID;
+    }
+
+    public String getNombreMarca() {
+        return nombreMarca;
+    }
+
+    public void setNombreMarca(String nombreMarca) {
+        this.nombreMarca = nombreMarca;
+    }
+
+    public String getSlugMarca() {
+        return slugMarca;
+    }
+
+    public void setSlugMarca(String slugMarca) {
+        this.slugMarca = slugMarca;
+    }
+
+    public String getDescripcionMarca() {
+        return descripcionMarca;
+    }
+
+    public void setDescripcionMarca(String descripcionMarca) {
+        this.descripcionMarca = descripcionMarca;
+    }
+
+    public String getImagenMarca() {
+        return imagenMarca;
+    }
+
+    public void setImagenMarca(String imagenMarca) {
+        this.imagenMarca = imagenMarca;
+    }
+
+    public Boolean getActiva() {
+        return activa;
+    }
+
+    public void setActiva(Boolean activa) {
+        this.activa = activa;
+    }
+
+    public Integer getOrden() {
+        return orden;
+    }
+
+    public void setOrden(Integer orden) {
+        this.orden = orden;
+    }
 }

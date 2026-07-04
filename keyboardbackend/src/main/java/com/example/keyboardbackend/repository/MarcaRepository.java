@@ -10,5 +10,5 @@ public interface MarcaRepository extends JpaRepository<Marca, Long> {
 
     Optional<Marca> findBySlugMarca(String slugMarca);
 
-    List<Marca> findByActiveTrue();
+    List<Marca> findByActivaTrue();
 }
