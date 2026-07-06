@@ -10,5 +10,5 @@ public interface CategoriaRepository extends JpaRepository<Categoria, Long> {
 
     Optional<Categoria> findBySlugCategoria(String slugCategoria);
 
-    List<Categoria> findByActiveTrue();
+    List<Categoria> findByActivaTrue();
 }

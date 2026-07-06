@@ -9,5 +9,5 @@ import java.util.List;
 
 public interface AtributoVarianteRepository extends JpaRepository<AtributoVariante,AtributoVarianteId> {
 
-    List<AtributoVariante> FindByVariante_VarianteID(Long varianteID);
+    List<AtributoVariante> findByVariante_VarianteID(Long varianteID);
 }

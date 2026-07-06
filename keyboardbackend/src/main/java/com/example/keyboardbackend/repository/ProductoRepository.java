@@ -11,13 +11,13 @@ public interface ProductoRepository extends JpaRepository<Producto, Long> {
 
     Optional<Producto> findBySlugProducto(String slugProducto);
 
-    List<Producto> findByActiveTrue();
+    List<Producto> findByActivoTrue();
 
     List<Producto> findByDestacadoTrue();
 
-    List<Producto> findByCategoria_CategoriaId(Long categoriaId);
+    List<Producto> findByCategoria_CategoriaID(Long categoriaId);
 
-    List<Producto> findByMarca_MarcaId(Long marcaId);
+    List<Producto> findByMarca_MarcaID(Long marcaId);
 
     List<Producto> findByNombreProductoContainingIgnoreCase(String texto);
 

@@ -7,6 +7,8 @@ import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
@@ -31,6 +33,10 @@ public class AtributoDefinicion {
     @Enumerated(EnumType.STRING)
     @Column(name = "tipoDato", nullable = false, length = 50)
     private TipoDato tipoAtributo = TipoDato.TEXTO;
+
+    @ManyToOne
+    @JoinColumn(name = "categoriaID")
+    private Categoria categoria;
 
     @Column(nullable = false)
     private Boolean requerido = false;

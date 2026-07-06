@@ -35,4 +35,9 @@ public class CategoriaService {
                 .orElseThrow(() -> new EntityNotFoundException("Categoria no encontrada con ID: " + id));
     }
 
+    public Categoria obtenerPorSlug(String slug) {
+        return categoriaRepository.findBySlugCategoria(slug)
+            .orElseThrow(() -> new EntityNotFoundException("Categoria no encontrada por slug: " + slug));
+    }
+
 }
