@@ -40,4 +40,22 @@ public class CategoriaService {
             .orElseThrow(() -> new EntityNotFoundException("Categoria no encontrada por slug: " + slug));
     }
 
+    @Transactional
+    public Categoria actualizar(Long id, Categoria datosNuevos) {
+        Categoria categoria = obtenerPorId(id);
+        categoria.setNombreCategoria(datosNuevos.getNombreCategoria());
+        categoria.setSlugCategoria(datosNuevos.getSlugCategoria());
+        categoria.setDescripcionCategoria(datosNuevos.getDescripcionCategoria());
+        categoria.setImagenCategoria(datosNuevos.getImagenCategoria());
+        categoria.setActiva(datosNuevos.getActiva());
+        categoria.setOrden(datosNuevos.getOrden());
+        return categoriaRepository.save(categoria);
+    }
+
+    @Transactional
+    public void eliminarCategoria(Long id) {
+        Categoria categoria = obtenerPorId(id);
+        categoriaRepository.delete(categoria);
+    }
+    
 }
